@@ -1,0 +1,8 @@
+.questionList {
+  margin: 10px 100px 20px 0px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid wheat;
+  border-radius: 4px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0, 5);
+}

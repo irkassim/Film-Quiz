@@ -1,0 +1,37 @@
+{
+  "data": [
+    {
+      "question": "Who is the directed of Avtar ?",
+      "option": ["Steven Spielberg", "James Cameron", "Martin Scorsese"],
+      "correctAnswer": "James Cameron",
+      "id": 1
+    },
+    {
+      "question": "What is the highest grossing movie in Hollywood ?",
+      "option": ["Avatar", "Avengers", "Titanic"],
+      "correctAnswer": "Avengers",
+      "id": 2
+    },
+    {
+      "question": "What is the alter ego of Batman called ?",
+      "option": ["Bruce Wayne", "Clerk Kent", "Bruce Banner"],
+      "correctAnswer": "Bruce Wayne",
+
+      "id": 3
+    },
+    {
+      "question": "Who was the first Black person to win an Oscar?",
+      "option": ["Hattie McDaniel", "Sidney Poitier", "James Earl Jones"],
+      "correctAnswer": "Hattie McDaniel",
+
+      "id": 4
+    },
+    {
+      "question": "What is the name of the fictional land where Frozen takes place?",
+      "option": ["Florin", "Arendelle", "Naples"],
+      "correctAnswer": "Arendelle",
+
+      "id": 5
+    }
+  ]
+}
