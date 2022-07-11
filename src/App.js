@@ -1,6 +1,6 @@
 import React from 'react';
 //import { useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 //page components
 import Navbar from './components/Navbar';
@@ -16,18 +16,21 @@ function App() {
 
   return (
     <div className="App">
-      <Routes>
-        <Route exact path="/startquiz">
-          <Startquiz />
-        </Route>
-        <Route exact path="/addquestion" element={Addquestion} />
+      <Navbar />
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/startquiz">
+            <Startquiz />
+          </Route>
+          <Route exact path="/addquestion">
+            <Addquestion />
+          </Route>
 
-        <Route
-          exact
-          path="/questions"
-          element={() => <Questions questions />}
-        />
-      </Routes>
+          <Route exact path="/questions">
+            <Questions />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
