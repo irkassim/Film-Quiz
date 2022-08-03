@@ -1,8 +1,53 @@
 .questionList {
-  margin: 10px 100px 20px 0px;
+  max-width: 650px;
+  margin: 60px auto;
   padding: 10px;
-  box-sizing: border-box;
-  border: 1px solid wheat;
+  border: 1.5px solid wheat;
   border-radius: 4px;
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0, 5);
+  background-color: lightgray;
+  font-size: 1.1em;
+  word-wrap: break-word;
+  letter-spacing: 1px;
+}
+
+.difficult {
+  padding: 10px;
+  margin-left: 600px;
+  font-size: 1.5em;
+}
+
+.words {
+  font-size: 1.1em;
+  padding: 5px;
+}
+.selection {
+  padding: 1px;
+}
+
+.qnum {
+  padding: 0.5px;
+}
+
+.question {
+  padding: 2px;
+  margin: 62px;
+  display: inline;
+}
+
+.submitquiz {
+  display: block;
+  max-width: 480px;
+  margin: 60px auto;
+  padding: 8px 20px;
+  border: 0;
+  border-radius: 4px;
+  background-color: red;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.options {
+  margin-left: 70px;
+  margin: 1%;
 }

@@ -14,3 +14,14 @@
   background-color: #fff;
   border-radius: 10px;
 }
+
+.closemodal {
+  max-width: 480px;
+  margin: 60px auto;
+  padding: 8px 20px;
+  border: 0;
+  border-radius: 4px;
+  background-color: red;
+  cursor: pointer;
+  text-decoration: none;
+}

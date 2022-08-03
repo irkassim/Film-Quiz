@@ -8,7 +8,6 @@ import Questions from './pages/questions/Questions';
 import Startquiz from './pages/startquiz/Startquiz';
 import Addquestion from './pages/addquestion/Addquestion';
 //import Resultsmodal from './pages/resultsmodal/Resultsmodal';
-import useFetch from './hooks/useFetch';
 
 function App() {
   //const [showresultsmodal, setshowresultsmodal] = useState(false);

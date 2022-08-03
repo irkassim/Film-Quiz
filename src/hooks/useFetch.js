@@ -3,18 +3,32 @@ import { useState, useEffect } from 'react';
 //we create the function in useEffect so we don't
 //have to pass it as a dependency
 
-const useFetch = (url) => {
+const useFetch = (url, method = 'GET') => {
   const [data, setData] = useState([]);
   const [ispending, setIsPending] = useState(false);
   const [error, setError] = useState(null);
+  const [options, setOptions] = useState(null);
+
+  const postData = (postData) => {
+    setOptions({
+      method: 'POST',
+      headers: {
+        'content-Type': 'application/json',
+      },
+      body: JSON.stringify(postData),
+    });
+  };
 
   useEffect(() => {
     const controller = new AbortController();
-    const fetchData = async () => {
+    const fetchData = async (fetchOptions) => {
       setIsPending(true);
 
       try {
-        const response = await fetch(url, { signal: controller.signal });
+        const response = await fetch(url, {
+          ...fetchOptions,
+          signal: controller.signal,
+        });
         if (!response.ok) {
           throw new Error(response.statusText);
         }
@@ -33,15 +47,21 @@ const useFetch = (url) => {
       }
     };
 
-    fetchData();
+    if (method === 'GET') {
+      fetchData();
+    }
+
+    if (method === 'POST' && options) {
+      fetchData(options);
+    }
 
     //cleanup function incase using component unmounts
     return () => {
       controller.abort();
     };
-  }, [url]);
+  }, [url, options, method]);
 
-  return { data, ispending, error };
+  return { data, ispending, error, postData };
 };
 
 export default useFetch;
